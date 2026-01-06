@@ -1,3 +1,3 @@
 <?php require_once "header.php" ?>
-        <h1>Accueil</h1>
+        <h1>Services</h1>
 <?php require_once "footer.php" ?>
