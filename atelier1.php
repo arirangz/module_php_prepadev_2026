@@ -25,8 +25,11 @@ $biggestCountry = ["name" => "", "population" => 0];
             <!-- Ajouter un if pour STOCKER le pays le plus grand -->
             <?php 
                 if ($country["population"] > $biggestCountry["population"]) {
-                    $biggestCountry["population"] = $country["population"];
-                    $biggestCountry["name"] = $country["name"];
+                    //$biggestCountry["population"] = $country["population"];
+                    //$biggestCountry["name"] = $country["name"];
+                    
+                    // On peut stocker directement le pays
+                    $biggestCountry = $country;
                 }
             ?>
 
