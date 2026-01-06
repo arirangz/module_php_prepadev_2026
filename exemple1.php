@@ -1,9 +1,8 @@
 <?php
 $prenom = "John";
 $age = 20;
-
 $fruits = ["Pomme", "Poire", "Fraise"];
-
+$utilisateur = ["nom" => "Doe", "prenom" => "John"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +16,6 @@ $fruits = ["Pomme", "Poire", "Fraise"];
 <body>
     <h2><?php echo "Hello $prenom" ?></h2>
     <h2><?= "Hello $prenom" ?></h2>
-
     <p>
         <?php    
         if ($age >= 18) {
@@ -27,9 +25,9 @@ $fruits = ["Pomme", "Poire", "Fraise"];
         }
         ?>
     </p>
-
     <p>Fruit: <?= $fruits[0] ?></p>
-
+    
+    <p>Nom: <?= $utilisateur["nom"] ?></p>
 </body>
 
 </html>
