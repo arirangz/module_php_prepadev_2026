@@ -33,6 +33,6 @@ $biggestCountry = ["name" => "", "population" => 0];
         <li><?= $country["name"] ?> - Population: <?= $country["population"] ?> millions</li>
         <?php endforeach; ?>
     </ul>
-    <h2>Le pays le plus peuplé est <?= $biggestCountry["name"] ?> avec une population de <?= $biggestCountry["population"] ?></h2>
+    <h2>Le pays le plus peuplé est <?= $biggestCountry["name"] ?> avec une population de <?= $biggestCountry["population"] ?> millions</h2>
 </body>
 </html>
