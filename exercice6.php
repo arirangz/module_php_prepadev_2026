@@ -15,8 +15,8 @@ function calculateArea(float $length, float $width):float
 <body>
     <h1>Exercice fonction</h1>
     <ul>
-        <li>Chambre: <?= calculateArea(3,3) ?> m²</li>
-        <li>Salon: <?= calculateArea(4,5) ?> m²</li>
+        <li>Chambre: <?= calculateArea(3,3) ?>m²</li>
+        <li>Salon: <?= calculateArea(4,5) ?>m²</li>
     </ul>
 </body>
 </html>
