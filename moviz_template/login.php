@@ -6,7 +6,7 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
     $isAllowed = loginUser($_POST["email"], $_POST["password"]);
 
     if ($isAllowed) {
-        header("Location: profile");
+        header("Location: profile.php");
     }
 }
 
