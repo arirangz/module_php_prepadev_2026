@@ -26,7 +26,7 @@ $movies = getMovies();
         <div class="card w-100">
           <img src="https://placehold.co/600x400?text=Exemple" class="card-img-top" alt="Exemple">
           <div class="card-body">
-            <h5 class="card-title"><?= $movie["title"] ?></h5>
+            <h5 class="card-title"><?= htmlspecialchars($movie["title"]); ?></h5>
             <a href="movie_details.php?index=<?= $index ?>" class="btn btn-primary">Voir la fiche</a>
           </div>
         </div>

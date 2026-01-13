@@ -23,6 +23,9 @@
         <li><a href="index.php" class="nav-link px-2 link-secondary">Home</a></li>
         <li><a href="about.php" class="nav-link px-2">About</a></li>
         <li><a href="contact.php" class="nav-link px-2">Contact</a></li>
+        <?php if (isset($_SESSION["email"])): ?>
+          <li><a href="profile.php" class="nav-link px-2">Profil</a></li>
+        <?php endif; ?>
       </ul>
 
       <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
@@ -30,9 +33,13 @@
       </form>
 
       <div class="col-md-3 text-end">
-        <a href="login.php" class="btn btn-outline-primary me-2">Login</a>
-        <a href="logout.php" class="btn btn-outline-primary me-2">Logout</a>
-        <button type="button" class="btn btn-primary">Sign-up</button>
+        <?php if (isset($_SESSION["email"])): ?>
+          <p><?="Connecté en tant que: ". htmlspecialchars($_SESSION["email"])  ?></p>
+          <a href="logout.php" class="btn btn-outline-primary me-2">Logout</a>
+        <?php else: ?>
+          <a href="login.php" class="btn btn-outline-primary me-2">Login</a>
+          <button type="button" class="btn btn-primary">Sign-up</button>
+        <?php endif; ?>
       </div>
     </header>
   </div>
