@@ -1,6 +1,6 @@
 <?php 
+require_once "templates/header.php"; 
 require_once "libs/user.php";
-
 
 if (isset($_POST["email"]) && isset($_POST["password"])) {
     $isAllowed = loginUser($_POST["email"], $_POST["password"]);
@@ -10,7 +10,6 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
     }
 }
 
-require_once "templates/header.php"; 
 ?>
 
 <main class="form-signin w-100 m-auto" style="max-width: 330px;">
