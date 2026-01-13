@@ -20,3 +20,4 @@ function getMovieByIndex(int $index):array|false
     }
     return false;
 }
+
