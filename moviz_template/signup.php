@@ -12,7 +12,6 @@ if (isset($_POST["email"]) && isset($_POST["nickname"]) && isset($_POST["passwor
         $error = true;
     }
 }
-
 ?>
 
 
