@@ -1,14 +1,15 @@
 <?php 
 
+require_once "libs/pdo.php";
 require_once "libs/movie.php";
 require_once "templates/header.php"; 
 
 $error = false;
 
-if (isset($_GET["index"])) {
-    $index = $_GET["index"];
-    if (is_numeric($index)) {
-        $movie = getMovieByIndex((int)$index);
+if (isset($_GET["id"])) {
+    $id = $_GET["id"];
+    if (is_numeric($id)) {
+        $movie = getMovieById($pdo, (int)$id);
         
         if (!$movie) {
             // Le film n'a pas été trouvé dans le tableau

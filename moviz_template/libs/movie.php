@@ -12,13 +12,15 @@ function getMovies(PDO $pdo):array
     return $movies;
 }
 
-function getMovieByIndex(int $index):array|false
+function getMovieById(PDO $pdo, int $id):array|false
 {
-    $movies = getMovies();
+    $query = $pdo->prepare("SELECT * FROM movie WHERE id = :id");
+    $query->bindValue(":id", $id, PDO::PARAM_INT);
+    $query->execute();
 
-    if (isset($movies[$index])) {
-        return $movies[$index];
-    }
-    return false;
+    $movie = $query->fetch(PDO::FETCH_ASSOC);
+
+    return $movie;
+
 }
 

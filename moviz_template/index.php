@@ -28,7 +28,7 @@ $movies = getMovies($pdo);
           <img src="https://placehold.co/600x400?text=Exemple" class="card-img-top" alt="Exemple">
           <div class="card-body">
             <h5 class="card-title"><?= htmlspecialchars($movie["title"]); ?></h5>
-            <a href="movie_details.php?index=<?= $index ?>" class="btn btn-primary">Voir la fiche</a>
+            <a href="movie_details.php?id=<?= htmlspecialchars($movie["id"]); ?>" class="btn btn-primary">Voir la fiche</a>
           </div>
         </div>
       </div>
