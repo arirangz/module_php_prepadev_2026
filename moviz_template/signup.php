@@ -40,6 +40,7 @@ if (isset($_POST["email"]) && isset($_POST["nickname"]) && isset($_POST["passwor
     </form>
 </div>
 
+
 <?php
 require_once "templates/footer.php";
 ?>
