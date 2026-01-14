@@ -23,5 +23,12 @@ function loginUser(PDO $pdo, string $email, string $password):bool
 
 function addUser(PDO $pdo, string $nickname, string $email, string $password):bool
 {
-    
+     $query = $pdo->prepare("INSERT INTO user (email, password, nickname)
+                            VALUES (:email, :password, :nickname)");
+    $query->bindValue(':email', $email);
+    $query->bindValue(':nickname', $nickname);
+    $hash = password_hash($password, PASSWORD_DEFAULT);
+    $query->bindValue(':password', $hash);
+    $result = $query->execute();
+    return $result;
 }
