@@ -38,7 +38,7 @@
           <a href="logout.php" class="btn btn-outline-primary me-2">Logout</a>
         <?php else: ?>
           <a href="login.php" class="btn btn-outline-primary me-2">Login</a>
-          <button type="button" class="btn btn-primary">Sign-up</button>
+          <a href="signup.php" class="btn btn-primary">S'inscrire</a>
         <?php endif; ?>
       </div>
     </header>

@@ -20,3 +20,8 @@ function loginUser(PDO $pdo, string $email, string $password):bool
     }
     return false;
 }
+
+function addUser(PDO $pdo, string $nickname, string $email, string $password):bool
+{
+    
+}
