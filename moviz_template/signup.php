@@ -3,7 +3,6 @@ require_once "templates/header.php";
 require_once "libs/pdo.php";
 require_once "libs/user.php";
 
-$error = false;
 if (isset($_POST["email"]) && isset($_POST["nickname"]) && isset($_POST["password"])) {
     $result = addUser($pdo, $_POST["nickname"], $_POST["email"], $_POST["password"]);
 
@@ -18,7 +17,7 @@ if (isset($_POST["email"]) && isset($_POST["nickname"]) && isset($_POST["passwor
 
 
 <div class="container">
-    <?php if ($error): ?>
+    <?php if (isset($error) && $error): ?>
         <div class="alert alert-danger" role="alert">
             Une erreur est survenue durant l'inscription
         </div>
