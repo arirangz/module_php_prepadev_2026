@@ -1,7 +1,8 @@
 <?php
+require_once "libs/pdo.php";
 require_once "libs/movie.php";
 require_once "templates/header.php";
-$movies = getMovies();
+$movies = getMovies($pdo);
 
 ?>
 
