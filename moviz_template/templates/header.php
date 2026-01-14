@@ -34,7 +34,7 @@
 
       <div class="col-md-3 text-end">
         <?php if (isset($_SESSION["email"])): ?>
-          <p><?="Connecté en tant que: ". htmlspecialchars($_SESSION["email"])  ?></p>
+          <p><?="Connecté en tant que: ". htmlspecialchars($_SESSION["nickname"])  ?></p>
           <a href="logout.php" class="btn btn-outline-primary me-2">Logout</a>
         <?php else: ?>
           <a href="login.php" class="btn btn-outline-primary me-2">Login</a>
