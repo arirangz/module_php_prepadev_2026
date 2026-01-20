@@ -1,7 +1,9 @@
 <?php
 require_once "Rectangle.php";
-$rectangle1 = new Rectangle("rouge", 10, 5);
-
+$rectangle1 = new Rectangle();
+$rectangle1->setCouleur("rouge");
+$rectangle1->setLargeur(10);
+$rectangle1->setLongueur(5);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +15,9 @@ $rectangle1 = new Rectangle("rouge", 10, 5);
 <body>
     <h1>Exerice POO Rectangle</h1>
     <h2>Rectangle</h2>
-    <p>Couleur : <?= $rectangle1->couleur ?></p>
+    <p>Couleur : <?= $rectangle1->getCouleur() ?></p>
+    <p>Longueur : <?= $rectangle1->getLongueur() ?>m</p>
+    <p>Largeur : <?= $rectangle1->getLargeur() ?>m</p>
     <p>Surface : <?= $rectangle1->calculerSurface() ?>m²</p>
 </body>
 </html>
