@@ -1,7 +1,8 @@
 <?php
-class Rectangle
+require_once "Forme.php";
+
+class Rectangle extends Forme
 {
-    protected string $couleur;
     protected float $longueur;
     protected float $largeur;
 
@@ -10,23 +11,6 @@ class Rectangle
         return $this->longueur * $this->largeur;
     }
 
-    /**
-     * Get the value of couleur
-     */
-    public function getCouleur(): string
-    {
-        return $this->couleur;
-    }
-
-    /**
-     * Set the value of couleur
-     */
-    public function setCouleur(string $couleur): self
-    {
-        $this->couleur = $couleur;
-
-        return $this;
-    }
 
     /**
      * Get the value of longueur
